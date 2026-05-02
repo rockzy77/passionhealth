@@ -1,0 +1,554 @@
+/* ============================================================
+   Passion Healthcare — AdminDashboard.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --teal: #2a7f8a;
+    --teal-dark: #1e6874;
+    --navy: #1a2e44;
+    --text-body: #4b5563;
+    --text-muted: #6b7280;
+    --border: #e5e7eb;
+    --bg-gray: #f9fafb;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --green: #16a34a;
+}
+
+.ad-page {
+    min-height: 100vh;
+    background: var(--bg-gray);
+    font-family: 'Lato', sans-serif;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  HEADER                                                     */
+/* ─────────────────────────────────────────────────────────── */
+.ad-header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.ad-header-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.ad-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ad-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #e8727a, #c0394a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.ad-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.ad-logo-passion {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.ad-logo-hc {
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.ad-header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.ad-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-body);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.ad-logout-btn:hover {
+    background: var(--bg-gray);
+    border-color: var(--red);
+    color: var(--red);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  CONTAINER                                                  */
+/* ─────────────────────────────────────────────────────────── */
+.ad-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  TABS                                                       */
+/* ─────────────────────────────────────────────────────────── */
+.ad-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    border-bottom: 2px solid var(--border);
+}
+
+.ad-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all .2s;
+    margin-bottom: -2px;
+}
+
+.ad-tab:hover {
+    color: var(--teal);
+}
+
+.ad-tab-active {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  CONTENT                                                    */
+/* ─────────────────────────────────────────────────────────── */
+.ad-content {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.ad-content-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ad-content-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.ad-btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--teal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.ad-btn-primary:hover {
+    background: var(--teal-dark);
+    transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  TABLE                                                      */
+/* ─────────────────────────────────────────────────────────── */
+.ad-table-wrapper {
+    overflow-x: auto;
+}
+
+.ad-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ad-table thead {
+    background: var(--bg-gray);
+}
+
+.ad-table th {
+    padding: 16px 32px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ad-table td {
+    padding: 16px 32px;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--text-body);
+}
+
+.ad-table-title {
+    font-weight: 500;
+    color: var(--navy);
+    max-width: 400px;
+}
+
+.ad-email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--teal);
+}
+
+.ad-action-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.ad-btn-edit,
+.ad-btn-delete {
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-btn-edit {
+    color: var(--teal);
+}
+
+.ad-btn-edit:hover {
+    background: #e8f4f6;
+    border-color: var(--teal);
+}
+
+.ad-btn-delete {
+    color: var(--red);
+}
+
+.ad-btn-delete:hover {
+    background: var(--red-light);
+    border-color: var(--red);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  MODAL                                                      */
+/* ─────────────────────────────────────────────────────────── */
+.ad-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.ad-modal {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ad-modal-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+}
+
+.ad-modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.ad-modal-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bg-gray);
+    font-size: 28px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+    line-height: 1;
+}
+
+.ad-modal-close:hover {
+    background: var(--red-light);
+    color: var(--red);
+}
+
+.ad-modal-form {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ad-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ad-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.ad-hint {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.ad-input,
+.ad-textarea {
+    padding: 12px 16px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    color: var(--navy);
+    outline: none;
+    transition: all .2s;
+}
+
+.ad-input:focus,
+.ad-textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 4px rgba(42, 127, 138, 0.1);
+}
+
+.ad-textarea {
+    resize: vertical;
+    min-height: 200px;
+}
+
+/* Image Upload Styles */
+.ad-upload-area {
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    background: var(--bg-gray);
+    transition: all .2s;
+}
+
+.ad-upload-area:hover {
+    border-color: var(--teal);
+    background: #e8f4f6;
+}
+
+.ad-file-input {
+    display: none;
+}
+
+.ad-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 48px 24px;
+    cursor: pointer;
+    color: var(--text-body);
+}
+
+.ad-upload-label svg {
+    color: var(--teal);
+}
+
+.ad-upload-label>span:first-of-type {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ad-upload-hint {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.ad-image-preview {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid var(--border);
+}
+
+.ad-image-preview img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.ad-remove-image {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(220, 38, 38, 0.9);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+}
+
+.ad-remove-image:hover {
+    background: var(--red);
+    transform: scale(1.1);
+}
+
+.ad-modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    padding-top: 8px;
+}
+
+.ad-btn-cancel,
+.ad-btn-save {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.ad-btn-cancel {
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--text-body);
+}
+
+.ad-btn-cancel:hover {
+    background: var(--bg-gray);
+}
+
+.ad-btn-save {
+    background: var(--teal);
+    border: none;
+    color: white;
+}
+
+.ad-btn-save:hover {
+    background: var(--teal-dark);
+    transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  RESPONSIVE                                                 */
+/* ─────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .ad-header {
+        padding: 16px 20px;
+    }
+
+    .ad-header-title {
+        font-size: 18px;
+    }
+
+    .ad-container {
+        padding: 20px;
+    }
+
+    .ad-tabs {
+        overflow-x: auto;
+    }
+
+    .ad-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .ad-table th,
+    .ad-table td {
+        padding: 12px 16px;
+    }
+
+    .ad-modal-form {
+        padding: 24px 20px;
+    }
+}

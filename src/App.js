@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import './css/Home.css';
+import './css/About.css';
+import './css/OurCareGivers.css';
+import './css/SpecialistCare.css';
+import './css/Contact.css';
+import './css/Services.css';
+import './css/NewsDetails.css';
+import './css/News.css';
+import './css/Careers.css';
+import './css/Admin.css';
+import './css/AdminDashboard.css';
+import CustomRouter from './components/CustomRouter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomRouter />
     </div>
   );
 }

@@ -1,0 +1,31 @@
+{
+  "name": "passion-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.0",
+    "expressjs": "^1.0.1",
+    "jsonwebtoken": "^9.0.3",
+    "mailer": "^0.6.7",
+    "multer": "^2.1.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.22.3",
+    "nodemailer": "^8.0.2",
+    "pg": "^8.20.0",
+    "sequelize": "^6.37.7",
+    "uuid": "^13.0.0",
+    "uuidv4": "^6.2.13"
+  }
+}

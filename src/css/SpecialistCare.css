@@ -1,0 +1,240 @@
+/* ============================================================
+   Passion Healthcare — SpecialistCare.css
+   Fonts: Playfair Display + Lato
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Lato:wght@300;400;500;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: none; }
+body { font-family: 'Lato', sans-serif; color: #1a2e44; background: #fff; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; font-family: 'Lato', sans-serif; }
+
+:root {
+  --teal:       #2a7f8a;
+  --teal-dark:  #1e6874;
+  --navy:       #1a2e44;
+  --text-body:  #4b5563;
+  --text-muted: #6b7280;
+  --border:     #e5e7eb;
+  --bg-light:   #f0f6f8;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  NAVBAR                                                     */
+/* ─────────────────────────────────────────────────────────── */
+.sc-navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.97);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  backdrop-filter: blur(8px);
+}
+.sc-nav-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 70px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.sc-logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.sc-logo-icon {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, #e8727a, #c0394a);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;
+}
+.sc-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.sc-logo-passion { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 700; color: var(--navy); }
+.sc-logo-hc { font-size: 9px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; }
+.sc-nav-links { display: flex; align-items: center; gap: 2px; flex: 1; justify-content: center; }
+.sc-nav-links a { font-size: 14px; font-weight: 500; color: var(--text-body); padding: 8px 12px; border-radius: 6px; transition: color .2s, background .2s; white-space: nowrap; }
+.sc-nav-links a:hover { color: var(--teal); background: #e8f4f6; }
+.sc-nav-links a.sc-active { color: var(--teal); font-weight: 600; }
+.sc-nav-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.sc-nav-phone { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--navy); }
+.sc-nav-phone svg { color: var(--teal); }
+.sc-btn-request {
+  background: var(--teal); color: white; font-size: 14px; font-weight: 600;
+  padding: 10px 20px; border-radius: 8px; transition: background .2s, transform .15s;
+}
+.sc-btn-request:hover { background: var(--teal-dark); transform: translateY(-1px); }
+
+/* ─────────────────────────────────────────────────────────── */
+/*  HERO                                                       */
+/* ─────────────────────────────────────────────────────────── */
+.sc-hero {
+  position: relative;
+  min-height: 460px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #2c4e5f 0%, #3d6a7d 100%);
+  background-image: 
+    linear-gradient(135deg, rgba(44,78,95,0.88) 0%, rgba(61,106,125,0.88) 100%),
+    url('/public/homecare3.png');
+  background-size: cover;
+  background-position: center;
+  margin-top: 70px;
+  color: white;
+  text-align: center;
+}
+.sc-hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(22,47,62,0.4);
+  z-index: 1;
+}
+.sc-hero-content {
+  position: relative; z-index: 2;
+  max-width: 840px; margin: 0 auto; padding: 80px 32px;
+  display: flex; flex-direction: column; gap: 24px; align-items: center;
+}
+.sc-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em;
+}
+.sc-hero-sub {
+  font-size: 16px; line-height: 1.7; opacity: 0.95;
+}
+.sc-hero-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; color: var(--navy);
+  font-size: 15px; font-weight: 600; padding: 14px 28px; border-radius: 10px;
+  transition: transform .2s, box-shadow .2s;
+  margin-top: 8px;
+}
+.sc-hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  CONDITIONS ACCORDION                                        */
+/* ─────────────────────────────────────────────────────────── */
+.sc-conditions {
+  background: #f7f9fb;
+  padding: 80px 32px;
+}
+.sc-conditions-inner {
+  max-width: 900px; margin: 0 auto;
+  text-align: left;
+}
+.sc-conditions-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px; font-weight: 700; color: var(--navy);
+  text-align: center; letter-spacing: -0.01em; margin-bottom: 16px;
+}
+.sc-conditions-sub {
+  text-align: center; font-size: 15px; color: var(--text-muted);
+  max-width: 680px; margin: 0 auto 56px; line-height: 1.7;
+}
+
+/* Accordion */
+.sc-accordion {
+  display: flex; flex-direction: column; gap: 12px;
+}
+
+.sc-accordion-item {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color .3s, box-shadow .3s;
+}
+
+.sc-accordion-item.sc-highlighted {
+  border-color: var(--teal);
+  box-shadow: 0 4px 20px rgba(42,127,138,0.15);
+}
+
+.sc-accordion-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.sc-accordion-header:hover {
+  background: #f8fafb;
+}
+
+.sc-accordion-left {
+  display: flex; align-items: center; gap: 16px;
+  flex: 1;
+}
+
+.sc-accordion-icon {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+
+.sc-accordion-title {
+  font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 2px;
+}
+
+.sc-accordion-subtitle {
+  font-size: 13px; color: var(--text-muted); line-height: 1.4;
+}
+
+.sc-accordion-toggle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #e8f4f6;
+  color: var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: transform .3s, background .2s;
+}
+
+.sc-accordion-toggle.sc-rotated {
+  transform: rotate(180deg);
+}
+
+.sc-accordion-toggle:hover {
+  background: #d4ebf0;
+}
+
+.sc-accordion-body {
+  padding: 0 24px 24px 92px;
+  border-top: 1px solid #f0f3f5;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sc-accordion-body p {
+  font-size: 14px; color: var(--text-body); line-height: 1.7; margin-bottom: 16px;
+}
+
+.sc-request-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--teal); font-size: 14px; font-weight: 600;
+  transition: gap .2s;
+}
+
+.sc-request-link:hover {
+  gap: 10px;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  RESPONSIVE                                                 */
+/* ─────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sc-nav-links, .sc-nav-phone { display: none; }
+  .sc-hero-title { font-size: 36px; }
+  .sc-hero-sub br { display: none; }
+  .sc-conditions-title { font-size: 32px; }
+  .sc-accordion-body { padding-left: 24px; }
+  .sc-accordion-left { gap: 12px; }
+  .sc-accordion-icon { width: 44px; height: 44px; }
+  .sc-accordion-title { font-size: 16px; }
+  .sc-accordion-subtitle { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .sc-hero-title { font-size: 28px; }
+  .sc-conditions-title { font-size: 26px; }
+}
